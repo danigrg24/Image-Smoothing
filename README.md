@@ -2,26 +2,27 @@ This project aims to blur an image in .bmp format and generate the resulting ima
 
 Image smoothing or blurring is achieved using convolution matrices or kernels. In image processing, a kernel, convolution matrix, or mask is a small matrix of dimensions like 3x3, 5x5, etc., which can be used to perform operations such as filtering. The general expression for convolution involves the processed image, the original image, and the kernel. For this project, the "Low Pass filtering" method was chosen, also known as a smoothing filter, which removes high-frequency content from the image. The convolution process involves adding each element of the image to its local neighbors, weighted by the kernel.
 
-Application Description
+Application Description:
 The application follows these steps to achieve the desired result:
 
-Takes the path to the image to be processed from the user.
-Takes the path where the resulting image will be written and displayed.
-Both images must be in BMP format. If everything is correct, the program starts running.
-Reads the image processing time.
-Processes the desired image.
-Calculates the processing time.
-Writes the image.
-Calculates the writing time.
-Displays the processing times.
+1) Takes the path to the image to be processed from the user.
+2) Takes the path where the resulting image will be written and displayed.
+3) Both images must be in BMP format. If everything is correct, the program starts running.
+4) Reads the image processing time.
+5) Processes the desired image.
+6) Calculates the processing time.
+7) Writes the image.
+8) Calculates the writing time.
+9) Displays the processing times.
+
 
 Structural-Architectural Description of the Application
 
 The application is divided into two packages (packWork and packTest), each containing the following classes and an interface:
 
-packTest:
+1) packTest:
 Main
-packWork:
+2) packWork:
 ReadImage
 SmoothImage
 TimeInterface (interface)
