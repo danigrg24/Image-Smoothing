@@ -16,6 +16,7 @@ Calculates the writing time.
 Displays the processing times.
 
 Structural-Architectural Description of the Application
+
 The application is divided into two packages (packWork and packTest), each containing the following classes and an interface:
 
 packTest:
@@ -26,17 +27,17 @@ SmoothImage
 TimeInterface (interface)
 WriteImage
 
-Class Main
+Class Main:
 This class manages input and output from the keyboard and performs read, processing, and write operations of the image from the source file. It does so by creating an instance of the WriteImage class and calling its writeImageToFile method.
 
-Class ReadImage
+Class ReadImage:
 This abstract class is responsible for reading images from the specified file via keyboard input. It also implements the TimeInterface interface to use time calculation functions available in the respective interface.
 
-Class SmoothImage
+Class SmoothImage:
 This abstract class processes the read image and inherits functionalities from the ReadImage class. It utilizes essential Java classes for image data manipulation. Methods of this class include reading the image, processing it using convolution operations, and calculating processing time.
 
-Class WriteImage
+Class WriteImage:
 This class manages the writing process of the processed image. It extends the SmoothImage class to benefit from its functionalities. Methods include reading the processed image, writing it to a specified file, and calculating writing time.
 
-Interface TimeInterface
+Interface TimeInterface:
 The interface contains 3 abstract methods implemented by the ReadImage class and inherited by the SmoothImage and WriteImage classes. It establishes a connection between the implementing classes and their users.
